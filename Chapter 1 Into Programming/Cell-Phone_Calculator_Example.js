@@ -55,29 +55,31 @@ const SPENDING_THRESHOLD = 200;
 var bank_balance = 303.91;
 var amount = 0;
 
-function calculateTax(amt){
+function calculateTax(amt) {
 
     return amt * TAX_RATE;
 
 }
 
 
-function formatAmount(amt){
+function formatAmount(amt) {
     return "$" + amt.toFixed(2);
+    
 }
 
-while(amount < bank_balance){
+while (amount < bank_balance) {
     amount += PHONE_PRICE;
 
-    if(amount < SPENDING_THRESHOLD){
+    if (amount < SPENDING_THRESHOLD) {
         amount += ACCESSORY_PRICE;
+        
     }
 }
 
-amount+= calculateTax(amount);
+amount += calculateTax(amount);
 
 console.log("Your purchase: " + formatAmount(amount));
 
-if(amount > bank_balance){
+if (amount > bank_balance) {
     console.log("You can't afford this purchase. :( ")
 }
