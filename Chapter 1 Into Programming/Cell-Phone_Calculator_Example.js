@@ -83,3 +83,4 @@ console.log("Your purchase: " + formatAmount(amount));
 if (amount > bank_balance) {
     console.log("You can't afford this purchase. :( ")
 }
+
